@@ -1,7 +1,14 @@
 package com.example.sample.login;
 /**
- * 아이디, 비번, 이름을 받아서 로그인하는 앱을 작성하시오
- * String String String
+ * packageName: com.example.sample.calc
+ * fileName   : Test
+ * author     : Jangwonjong
+ * date       : 2022-01-24
+ * desc       : 아이디, 비번, 이름을 받아서 로그인하는 앱
+ * ======================================
+ * DATE          AUTHOR            NOTE
+ * ======================================
+ * 2022-01-24     Jangwonjong       최초 생성
  */
 
 public class LoginApp {

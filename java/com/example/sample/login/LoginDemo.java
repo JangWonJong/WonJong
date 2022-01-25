@@ -2,8 +2,15 @@ package com.example.sample.login;
 
 import java.util.Scanner;
 /**
- * 아이디, 비번, 이름을 받아서 로그인하는 앱을 작성하시오
- * String String String
+ * packageName: com.example.sample.calc
+ * fileName   : Test
+ * author     : Jangwonjong
+ * date       : 2022-01-24
+ * desc       : 로그인앱을 실행하는 컨트롤러
+ * ======================================
+ * DATE          AUTHOR            NOTE
+ * ======================================
+ * 2022-01-24     Jangwonjong       최초 생성
  */
 
 public class LoginDemo {

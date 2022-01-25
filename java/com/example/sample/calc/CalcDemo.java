@@ -2,9 +2,16 @@ package com.example.sample.calc;
 
 import java.util.Scanner;
 /**
- * 숫자 2개와 연산자 1개를 받아서 계산하는 계산기앱을 작성하시오
- * int, String
- * */
+ * packageName: com.example.sample.calc
+ * fileName   : CalcDemo.java
+ * author     : Jangwonjong
+ * date       : 2022-01-24
+ * desc       : 계산기 앱을 실행하는 컨트롤러
+ * ======================================
+ * DATE          AUTHOR            NOTE
+ * ======================================
+ * 2022-01-24     Jangwonjong       최초 생성
+ */
 
 
 public class CalcDemo {

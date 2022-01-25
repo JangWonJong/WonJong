@@ -2,8 +2,15 @@ package com.example.sample.kakao;
 
 import java.util.Scanner;
 /**
- * 전화번호와 메시지를 받아서 전송하는 앱을 작성하시오
- * String telno, String message
+ * packageName: com.example.sample.kakao
+ * fileName   : KakaoDemo.java
+ * author     : Jangwonjong
+ * date       : 2022-01-24
+ * desc       : 카카오앱을 실행하는 컨트롤러
+ * ======================================
+ * DATE          AUTHOR            NOTE
+ * ======================================
+ * 2022-01-24     Jangwonjong       최초 생성
  */
 
 public class KakaoDemo {

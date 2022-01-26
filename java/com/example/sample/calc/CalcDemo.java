@@ -5,12 +5,12 @@ import java.util.Scanner;
  * packageName: com.example.sample.calc
  * fileName   : CalcDemo.java
  * author     : Jangwonjong
- * date       : 2022-01-25
+ * date       : 2022-01-26
  * desc       : 계산기 앱을 실행하는 컨트롤러
  * ======================================
  * DATE          AUTHOR            NOTE
  * ======================================
- * 2022-01-25     Jangwonjong       최초 생성
+ * 2022-01-26     Jangwonjong       최초 생성
  */
 
 
@@ -25,7 +25,7 @@ public class CalcDemo {
         String opcode = scanner.next();
         System.out.println("두번째 숫자 : ");
         int num2 = scanner.nextInt();
-        String res = calcApp.calc(num1, opcode, num2);
-        System.out.println("연산결과 : "+ res);
+        String result = calcApp.calc(num1, opcode, num2);
+        System.out.println("연산결과 : "+ result);
     }
 }

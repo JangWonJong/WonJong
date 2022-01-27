@@ -14,14 +14,10 @@ import java.util.Scanner;
  * 2022-01-25     Jangwonjong       최초 생성
  */
 public class GoogleDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        GoogleApp googleApp = new GoogleApp();
-        System.out.println(GoogleApp.GOOGLE_APP);
-        System.out.println("Google 검색 또는 URL 검색");
-        String search = scanner.next();
-        String res = googleApp.google(search);
-        System.out.println(res);
+    public String execute(String search) {
+       GoogleApp googleApp = new GoogleApp();
+       return googleApp.getgoogle(search);
+
 
     }
 

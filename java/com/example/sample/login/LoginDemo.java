@@ -14,18 +14,10 @@ import java.util.Scanner;
  */
 
 public class LoginDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String execute(String id, String pw, String name) {
         LoginApp loginApp = new LoginApp();
-        System.out.println(LoginApp.LOGIN_TITLE);
-        System.out.println("ID");
-        String id = scanner.next();
-        System.out.println("PW");
-        String pw = scanner.next();
-        System.out.println("NAME");
-        String name = scanner.next();
-        String res = loginApp.login(id, pw, name);
-        System.out.println(res);
+        return loginApp.getlogin(id, pw, name);
+
 
 
 

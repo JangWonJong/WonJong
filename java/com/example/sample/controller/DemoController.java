@@ -1,5 +1,15 @@
 package com.example.sample.controller;
 
+import com.example.sample.bmi.BmiApp;
+import com.example.sample.bmi.BmiDemo;
+import com.example.sample.calc.CalcApp;
+import com.example.sample.calc.CalcDemo;
+import com.example.sample.google.GoogleApp;
+import com.example.sample.google.GoogleDemo;
+import com.example.sample.line.LineApp;
+import com.example.sample.login.LoginApp;
+import com.example.sample.login.LoginDemo;
+
 import java.util.Scanner;
 
 /**
@@ -16,18 +26,38 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        for(int i=0; i<2; i++){
+        CalcDemo calcDemo = new CalcDemo();
+        BmiDemo bmiDemo = new BmiDemo();
+        GoogleDemo googleDemo = new GoogleDemo();
+        LoginDemo loginDemo = new LoginDemo();
+        while(true){
             System.out.println("메뉴 선택");
-            String menu =  "1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
+            String menu =  "0.Exit 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
             System.out.println(menu);
             String select = scanner.next();
             String res = "";
             switch (select){
-                case "1": res = "BMI" ; break;
-                case "2": res = "CALC"; break;
-                case "3": res = "SEARCH"; break;
-                case "4": res = "GRADE" ; break;
-                case "5": res = "LOGIN" ; break;
+                case "0":
+                    System.out.println("Exit"); return;
+                case "1":
+                    System.out.println(BmiApp.BMI_TITLE+"\n이름, 키, 몸무게 입력");
+                    res = bmiDemo.execute(scanner.next(), scanner.nextInt(), scanner.nextInt());
+                    break;
+                case "2":
+                    System.out.println(CalcApp.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
+                    res = calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt());
+                    break;
+                case "3":
+                    System.out.println(GoogleApp.GOOGLE_APP+"\nGoogle 검색 또는 URL 검색");
+                    res = googleDemo.execute(scanner.next());
+                break;
+                case "4": res = "GRADE" ;
+
+                break;
+                case "5":
+                    System.out.println(LoginApp.LOGIN_TITLE+"\n이름 아이디 비밀번호를 입력하세요");
+                    res = loginDemo.execute(scanner.next(), scanner.next(), scanner.next());
+                break;
                 default : res = "Invalid MENU"  ; break;
             }
             System.out.println(res);

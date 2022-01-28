@@ -1,12 +1,11 @@
 package com.example.sample.controller;
 
-import com.example.sample.bmi.BmiApp;
-import com.example.sample.bmi.BmiDemo;
+import com.example.sample.bmi.BmiDTO;
+import com.example.sample.bmi.BmiService;
 import com.example.sample.calc.CalcApp;
 import com.example.sample.calc.CalcDemo;
 import com.example.sample.google.GoogleApp;
 import com.example.sample.google.GoogleDemo;
-import com.example.sample.line.LineApp;
 import com.example.sample.login.LoginApp;
 import com.example.sample.login.LoginDemo;
 
@@ -26,8 +25,9 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        BmiDTO bmi = new BmiDTO();
+        BmiService bmiService = new BmiService();
         CalcDemo calcDemo = new CalcDemo();
-        BmiDemo bmiDemo = new BmiDemo();
         GoogleDemo googleDemo = new GoogleDemo();
         LoginDemo loginDemo = new LoginDemo();
         while(true){
@@ -40,8 +40,11 @@ public class DemoController {
                 case "0":
                     System.out.println("Exit"); return;
                 case "1":
-                    System.out.println(BmiApp.BMI_TITLE+"\n이름, 키, 몸무게 입력");
-                    res = bmiDemo.execute(scanner.next(), scanner.nextInt(), scanner.nextInt());
+                    System.out.println(BmiDTO.BMI_TITLE+"\n이름, 키, 몸무게 입력");
+                    bmi.setName(scanner.next());
+                    bmi.setHeight(scanner.nextInt());
+                    bmi.setWeight(scanner.nextInt());
+                    res = bmiService.getBmi(bmi);
                     break;
                 case "2":
                     System.out.println(CalcApp.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");

@@ -1,7 +1,5 @@
 package com.example.sample.line;
 
-import com.example.sample.calc.CalcApp;
-
 import java.util.Scanner;
 
 public class LineDemo {

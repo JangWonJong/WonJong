@@ -1,4 +1,6 @@
-package com.example.sample.algorithm;
+package com.example.sample.controller;
+
+import com.example.sample.algorithm.*;
 
 import java.util.Scanner;
 

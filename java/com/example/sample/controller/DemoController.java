@@ -1,13 +1,9 @@
 package com.example.sample.controller;
 
-import com.example.sample.bmi.BmiDTO;
-import com.example.sample.bmi.BmiService;
-import com.example.sample.calc.CalcApp;
-import com.example.sample.calc.CalcDemo;
-import com.example.sample.google.GoogleApp;
-import com.example.sample.google.GoogleDemo;
-import com.example.sample.login.LoginApp;
-import com.example.sample.login.LoginDemo;
+import com.example.sample.domain.*;
+import com.example.sample.kakao.KakaoDTO;
+import com.example.sample.kakao.KakaoService;
+import com.example.sample.service.*;
 
 import java.util.Scanner;
 
@@ -26,13 +22,20 @@ public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         BmiDTO bmi = new BmiDTO();
+        CalcDTO calc = new CalcDTO();
+        GoogleDTO google = new GoogleDTO();
+        GradeDTO grade = new GradeDTO();
+        LoginDTO login = new LoginDTO();
+        KakaoDTO kakao = new KakaoDTO();
         BmiService bmiService = new BmiService();
-        CalcDemo calcDemo = new CalcDemo();
-        GoogleDemo googleDemo = new GoogleDemo();
-        LoginDemo loginDemo = new LoginDemo();
+        CalcService calcService = new CalcService();
+        GoogleService googleService = new GoogleService();
+        GradeService gradeService = new GradeService();
+        LoginService loginService = new LoginService();
+        KakaoService kakaoService = new KakaoService();
         while(true){
             System.out.println("메뉴 선택");
-            String menu =  "0.Exit 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
+            String menu =  "0.Exit 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN 6.KAKAO";
             System.out.println(menu);
             String select = scanner.next();
             String res = "";
@@ -47,20 +50,36 @@ public class DemoController {
                     res = bmiService.getBmi(bmi);
                     break;
                 case "2":
-                    System.out.println(CalcApp.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
-                    res = calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt());
+                    System.out.println(CalcDTO.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
+                    calc.setNum1(scanner.nextInt());
+                    calc.setOpcode(scanner.next());
+                    calc.setNum2(scanner.nextInt());
+                    res = calcService.getCalc(calc);
                     break;
                 case "3":
-                    System.out.println(GoogleApp.GOOGLE_APP+"\nGoogle 검색 또는 URL 검색");
-                    res = googleDemo.execute(scanner.next());
+                    System.out.println(GoogleDTO.GOOGLE_APP+"\nGoogle 검색 또는 URL 검색");
+                    google.setSearch(scanner.next());
+                    res = googleService.getGoogle(google);
                 break;
-                case "4": res = "GRADE" ;
-
-                break;
+                case "4":
+                    System.out.println(GradeDTO.GRADE_TITLE+"\n 이름, 국어, 영어, 수학 입력");
+                    grade.setName(scanner.next());
+                    grade.setKor(scanner.nextInt());
+                    grade.setEng(scanner.nextInt());
+                    grade.setMath(scanner.nextInt());
+                    res = gradeService.getGrade(grade);
+                    break;
                 case "5":
-                    System.out.println(LoginApp.LOGIN_TITLE+"\n이름 아이디 비밀번호를 입력하세요");
-                    res = loginDemo.execute(scanner.next(), scanner.next(), scanner.next());
-                break;
+                    System.out.println(LoginDTO.LOGIN_TITLE+"\n이름 아이디 비밀번호를 입력하세요");
+                    login.setName(scanner.next());
+                    login.setId(scanner.next());
+                    login.setPw(scanner.next());
+                    res = loginService.getLogin(login);
+                case "6":
+                    System.out.println(KakaoDTO.KAOKAO_TITLE+"\n 전화번호 메시지");
+                    kakao.setTelno(scanner.next());
+                    kakao.setMessage(scanner.next());
+                    res = kakaoService.getKakao(kakao);
                 default : res = "Invalid MENU"  ; break;
             }
             System.out.println(res);

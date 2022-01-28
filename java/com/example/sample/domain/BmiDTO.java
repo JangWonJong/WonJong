@@ -1,4 +1,4 @@
-package com.example.sample.bmi;
+package com.example.sample.domain;
 
 /**
  * packageName: com.example.sample.bmi
@@ -38,10 +38,5 @@ public class BmiDTO {
     public void setWeight(int weight){
         this.weight = weight;
     }
-
-
-
-
-
 }
 

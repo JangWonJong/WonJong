@@ -11,14 +11,23 @@ package com.example.sample.kakao;
  * 2022-01-24     Jangwonjong       최초 생성
  */
 
-public class KakaoApp {
-    static String KAOKAO_TITLE = "카카오앱";
-    String telno;
-    String message;
+public class KakaoDTO {
+    public static String KAOKAO_TITLE = "KAKAO";
+    private String telno;
+    private String message;
 
-    public String kakao(String telno, String message){
-    this.telno = telno;
-    this.message = message;
-    return String.format("TElNO : %s, MESSAGE : %S", this.telno, this.message);
+    public String getTelno(){
+        return telno;
     }
+    public void setTelno(String telno){
+        this.telno = telno;
+    }
+    public String getMessage(){
+        return message;
+    }
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+
 }

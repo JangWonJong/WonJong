@@ -1,7 +1,5 @@
 package com.example.sample.naver;
 
-import com.example.sample.google.GoogleApp;
-
 import java.util.Scanner;
 
 /**

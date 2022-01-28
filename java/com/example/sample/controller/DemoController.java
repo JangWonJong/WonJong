@@ -1,8 +1,8 @@
 package com.example.sample.controller;
 
 import com.example.sample.domain.*;
-import com.example.sample.kakao.KakaoDTO;
-import com.example.sample.kakao.KakaoService;
+import com.example.sample.domain.KakaoDTO;
+import com.example.sample.service.KakaoService;
 import com.example.sample.service.*;
 
 import java.util.Scanner;

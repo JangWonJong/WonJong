@@ -1,4 +1,4 @@
-package com.example.sample.kakao;
+package com.example.sample.domain;
 /**
  * packageName: com.example.sample.kakao
  * fileName   : KakaoApp.java

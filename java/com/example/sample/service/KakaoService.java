@@ -1,6 +1,7 @@
-package com.example.sample.kakao;
+package com.example.sample.service;
 
-import java.util.Scanner;
+import com.example.sample.domain.KakaoDTO;
+
 /**
  * packageName: com.example.sample.kakao
  * fileName   : KakaoDemo.java

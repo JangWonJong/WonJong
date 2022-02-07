@@ -15,33 +15,26 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        String[] arr = {"장원종", "김아름", "유재혁", "최건일", "강민",
-                "BFS", "Stack", "Hash", "Bin", "DP",
-                "DFS", "Queue", "Sort", "Greedy", "Graph",
-                "Brute Force", "Heap", "", "", ""};
+        String[] arr = {"장원종",        "김아름",       "유재혁",       "최건일",    "강민",
+                        "BFS",          "Stack",        "Hash",        "Bin",     "DP",
+                        "DFS",          "Queue",        "Sort",        "Greedy",  "Graph",
+                        "Brute Force",  "Heap"};
 
         System.out.println("Q1. 팀별 과제를 출력하세요 ");
         String s = "";
         for (int i = 0; i < arr.length; i++) {
-            if (i % 5 == 0) {
-                s += "\n";
-            } else if (i >= 17) {
-                break;
-            }
+            if (i%5==0) { s += "\n";
             s += i + " : " + arr[i] + "\t";
         }
         System.out.println(s);
         s = "";
-        System.out.println("Q1. 팀장이 맡은 과제만 출력하세요 ");
+        System.out.println("Q2. 팀장이 맡은 과제만 출력하세요 ");
         String l = "강민";
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals(l)) {
                 for (int j = 0; j < 4; j++) {
-                    s += arr[i + j * 5] + ",";
-                }
-                if (i == 17) {
-                    break;
-                }
+                    s += arr[i + j * 5] + ","; }
+                if (i == 17) {break; }
             }
         }
         System.out.println(s);
@@ -56,27 +49,11 @@ public class TempController {
         }
         System.out.println(s);
         s = "";
-        System.out.println("Q3. 입력한 과목의 인덱스를 추출하세요.");
+        /*입력한 과목의 인덱스를 추출하세요.");
         //5, 10, 15 -> 0
         //6, 11, 16 -> 1
         //7, 12, 17 -> 2
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equals("Stack")) {
-
-                //System.out.println("Queue의 인덱스 : "+ i);
-                System.out.println(arr[i] + "의 담당자는 " + arr[i - 5]);
-            }
-            if (arr[i].equals("Queue")) {
-                //System.out.println("Queue의 인덱스 : "+ i);
-                System.out.println(arr[i] + "의 담당자는 " + arr[i - 10]);
-            }
-            if (arr[i].equals("Heap")) {
-                //System.out.println("Queue의 인덱스 : "+ i);
-                System.out.println(arr[i] + "의 담당자는 " + arr[i - 15]);
-            }
-            System.out.println(s);
-
-        }
+        }*/
 
 
 
@@ -118,4 +95,6 @@ public class TempController {
         System.out.println(arr[4]+"의 카운트는 "+count4);
 
     }
+}}
 }
+

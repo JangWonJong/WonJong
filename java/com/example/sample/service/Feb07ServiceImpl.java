@@ -34,18 +34,80 @@ public class Feb07ServiceImpl implements Feb07Service{
             res = "6번이 나왔습니다.";
         }
         System.out.println(res);
-
     }
 
     @Override
     public void rps(Scanner scanner) {
-        System.out.println("가위바위보 문제");
+        while (true) {
+            System.out.println("###가위바위보 게임###\n" +
+                    "0.종료 1.가위 2.바위 3.보");
+            int user = scanner.nextInt();
+            int com = (int) (Math.random() * 3);
+            String s = "";
+            String[] arrrps = new String[3];
+            arrrps[0] = "가위";
+            arrrps[1] = "바위";
+            arrrps[2] = "보";
+            switch (user) {
+                case 0:
+                    System.out.println("가위바위보 종료");
+                    return;
+                case 1:
+                    System.out.println("유저는" + arrrps[user - 1] + ", 컴퓨터는" + arrrps[com] + "을(를)냈습니다.");
+                    if (com == 0) {
+                        s = "비겼습니다.";
+                    } else if (com == 1) {
+                        s = "컴퓨터가 이겼습니다.";
+                    } else {
+                        s = "유져가 이겼습니다.";
+                    }
+                    break;
+                case 2:
+                    System.out.println("유저는" + arrrps[user - 1] + ", 컴퓨터는" + arrrps[com] + "을(를)냈습니다.");
+                    if (com == 0) {
+                        s = "유져가 이겼습니다.";
+                    } else if (com == 1) {
+                        s = "비겼습니다.";
+                    } else {
+                        s = "컴퓨터가 이겼습니다.";
+                    }
+                    break;
+                case 3:
+                    System.out.println("유저는" + arrrps[user - 1] + ", 컴퓨터는" + arrrps[com] + "을(를)냈습니다.");
+                    if (com == 0) {
+                        s = "컴퓨터가 이겼습니다.";
+                    } else if (com == 1) {
+                        s = "유져가 이겼습니다.";
+                    } else {
+                        s = "비겼습니다.";
+                    }
+                    break;
+                default:
+                    s = "잘못 입력하셨습니다.";
+                    break;
+            }
 
+            System.out.println(s);
+        }
     }
 
     @Override
     public void getPrime(Scanner scanner) {
-        System.out.println("입력받은 두 수 사이에 있는 소수 구하기");
+        int count=0;
+        System.out.println("100이하의 숫자를 입력(소수 구하기) : ");
+        int number = scanner.nextInt();
+
+        for (int i = 2; i < number; i++) {
+            for(int j=2; j<=i;j++){
+                if(i%j ==0){
+                    count++;
+                }
+            }
+            if(count==1){
+                System.out.print(i+"\t");
+            }
+            count =0;
+        }
 
     }
 
@@ -59,9 +121,13 @@ public class Feb07ServiceImpl implements Feb07Service{
      *
      */
     public void leapYear(Scanner scanner) {
-        System.out.println("자바로 입력받은 연도가 윤년인지 평년인지 판단하기");
-        System.out.println("연도를 입력하시오");
+        System.out.println("자바로 입력받은 연도가 윤년인지 평년인지 판단하기\n"+"연도를 입력하시오");
         int a = scanner.nextInt();
+        if(a%4==0 && a%100!=0 || a%400==0){
+            System.out.println(a +"년은 윤년입니다");
+        }else{
+            System.out.println(a +"년은 평년입니다");
+        }
         /*if(a%4==0){
             System.out.println(a+"년은 윤년입니다");
         }else if(a%400==0){
@@ -69,6 +135,7 @@ public class Feb07ServiceImpl implements Feb07Service{
         }else if(a%100!=0){
             System.out.println(a+"년은 평년입니다");
         }*/
+
         /*int input = 0;
         int a = 0;
         switch (input){
@@ -80,15 +147,7 @@ public class Feb07ServiceImpl implements Feb07Service{
                 break;
             case a%400==0 :
                 System.out.println("윤년");
-                break;
-        }*/
-        if(a%4==0 && a%100!=0 || a%400==0){
-            System.out.println(a +"는 윤년입니다");
-        }else{
-            System.out.println(a +"는 평년입니다");
-         }
-
-
+                break;}*/
     }
 
     @Override

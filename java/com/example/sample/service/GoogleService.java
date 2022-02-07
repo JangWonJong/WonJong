@@ -14,7 +14,7 @@ import com.example.sample.domain.GoogleDTO;
  * 2022-01-25     Jangwonjong       최초 생성
  */
 public class GoogleService {
-    public String getGoogle(GoogleDTO google) {
+    public String google(GoogleDTO google) {
     return String.format("검색결과는 %s 입니다",google.getSearch());
 
 

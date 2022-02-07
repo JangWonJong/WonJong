@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 2022-01-26     Jangwonjong       최초 생성
  */
 public class GradeService {
-    public String getGrade(GradeDTO grade){
+    public String grade(GradeDTO grade){
         System.out.println(" GradeService에 들어옴");
         System.out.println(grade.toString());
         int total = grade.getKor() + grade.getEng() + grade.getMath();

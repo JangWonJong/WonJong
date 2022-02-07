@@ -16,7 +16,7 @@ import com.example.sample.domain.CalcDTO;
 
 
 public class CalcService {
-    public String getCalc(CalcDTO calc) {
+    public String calc(CalcDTO calc) {
         int reusult =0;
         switch (calc.getOpcode()) {
             case "+": reusult = calc.getNum1() + calc.getNum2();

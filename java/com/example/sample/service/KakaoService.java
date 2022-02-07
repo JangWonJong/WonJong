@@ -15,7 +15,7 @@ import com.example.sample.domain.KakaoDTO;
  */
 
 public class KakaoService {
-    public String getKakao(KakaoDTO kakao){
+    public String kakao(KakaoDTO kakao){
     return String.format("TElNO : %s, MESSAGE : %S",kakao.getTelno(),kakao.getMessage());
 
     }

@@ -15,27 +15,33 @@ package com.example.sample.domain;
  * 2022-01-25     Jangwonjong       최초 생성
  */
 public class BmiDTO {
-    public static String BMI_TITLE = "BMI";
+    public static String BMI_TITLE = "BMI 구하기";
     private String name;
-    private int height;
-    private int weight;
+    private double tall;
+    private double weight;
 
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    public int getHeight(){
-        return height;
+
+    public double getTall() {
+        return tall;
     }
-    public void setHeight(int height){
-        this.height = height;
+
+    public void setTall(double tall) {
+        this.tall = tall;
     }
-    public int getWeight(){
+
+    public double getWeight() {
         return weight;
     }
-    public void setWeight(int weight){
+
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }

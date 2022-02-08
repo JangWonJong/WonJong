@@ -12,4 +12,7 @@ package com.example.sample.algo.service;
  * 2022-02-08     Jangwonjong       최초 생성
  */
 public interface GraphService {
+    int farNode(int n, int[][] edge);     //가장 먼 노드
+    int rank(int n, int[][] results);     //순위
+    int numRoom(int[] arrows);           //방의 개수                    // 도둑질
 }

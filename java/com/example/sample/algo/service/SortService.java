@@ -12,4 +12,7 @@ package com.example.sample.algo.service;
  * 2022-02-08     Jangwonjong       최초 생성
  */
 public interface SortService {
+    int[] kNum(int[] array, int[][] commands);
+    String bigNum(int[] numbers);
+    int hIndex(int[] citations);
 }

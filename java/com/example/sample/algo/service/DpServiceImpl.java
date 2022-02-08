@@ -14,22 +14,42 @@ package com.example.sample.algo.service;
 public class DpServiceImpl implements DpService{
 
     @Override
+    /**
+     * https://programmers.co.kr/learn/courses/30/lessons/42895
+     * N으로 표현
+     * */
     public int showN(int N, int number) {
-        return 0;
+        int answer = 0;
+        return answer;
     }
 
     @Override
+    /**
+     * https://programmers.co.kr/learn/courses/30/lessons/43105
+     * 정수 삼각형
+     * */
     public int intTri(int[][] triangle) {
-        return 0;
+        int answer = 0;
+        return answer;
     }
 
     @Override
+    /**
+     * https://programmers.co.kr/learn/courses/30/lessons/42898
+     * 등교길
+     * */
     public int goSchool(int m, int n, int[][] puddles) {
-        return 0;
+        int answer = 0;
+        return answer;
     }
 
     @Override
+    /**
+     * https://programmers.co.kr/learn/courses/30/lessons/42897
+     * 도둑질
+     * */
     public int thief(int[] money) {
-        return 0;
+        int answer = 0;
+        return answer;
     }
 }

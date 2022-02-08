@@ -14,11 +14,13 @@ package com.example.sample.algo.service;
 public class BinSearchServiceImpl implements BinSearchService{
     @Override
     public long audit(int n, int[] times) {
-        return 0;
+        long answer = 0;
+        return answer;
     }
 
     @Override
     public int bridge(int distance, int[] rocks, int n) {
-        return 0;
+        int answer = 0;
+        return answer;
     }
 }

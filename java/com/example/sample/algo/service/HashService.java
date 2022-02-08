@@ -12,7 +12,10 @@ package com.example.sample.algo.service;
  * 2022-02-08     Jangwonjong       최초 생성
  */
 public interface HashService {
-    String retire(String[] participant, String[] completion);
+    String failedPlayer(String[] participant, String[] completion);
+    boolean phoneBook(String[] phone_book);
+    int spy(String[][] clothes);
+    int[] bestAlbum(String[] genres, int[] plays);
 
 }
 

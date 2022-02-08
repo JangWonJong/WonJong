@@ -1,11 +1,11 @@
-package com.example.sample.quiz.service;
+package com.example.sample.test;
 
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
- * packageName: com.example.sample.quiz.service
- * fileName   : Feb08Service
+ * packageName: com.example.sample.test
+ * fileName   : Baseb
  * author     : Jangwonjong
  * date       : 2022-02-08
  * desc       :
@@ -14,25 +14,16 @@ import java.util.Scanner;
  * ======================================
  * 2022-02-08     Jangwonjong       최초 생성
  */
-public class Feb08ServiceImpl implements Feb08Service{
-    @Override
-    public void lotto(Scanner scanner) {
-
-    }
-
-    @Override
-    /**숫자야구의 조건
-     1 ~ 9 사이의 랜덤 숫자 3개 생성 (중복 X, 음수 X)
-     1 ~ 9 사이의 사용자 입력 숫자 3개 생성 (중복 X, 음수 X)
-     랜덤 숫자와 사용자 입력 숫자의 위치와 숫자가 모두 같은 경우 -> strike
-     랜덤 숫자와 사용자 입력 숫자의 위치는 다르고 숫자가 같은 경우 -> ball
-     하나의 랜덤 숫자당 기회 총 10번
-     기회를 모두 소진하거나 정답을 입력 시 replay 여부 체크
-     'Y' 또는 'y' 입력 시 랜덤 숫자 생성부터 다시 실행
-     'N' 또는 'n' 이나 다른 문자 입력 시 게임 종료
-     *
+public class Baseb {
+    /**
+     * 1. 세 자리의 랜덤 숫자를 정한다.( 범위는 1 ~ 9 )
+     * 2. 숫자를 맞추고
+     * 동시에 위치를 맞추면 Strike
+     * 3. 숫자를 맞췄지만, 위치가 다르면 Ball
+     * 4. 번호와 위치 다 맞지 않을 시에는 out
+     * 5. 세자리의 숫자를 맞추게 되면 게임 끝
      */
-    public void baseball(Scanner scanner) {
+    public static void main(String[] args) {
         int com[] = new int[3]; // 컴퓨터가 제공하는 숫자
         int user[] = new int[3]; // 사용자가 입력할 숫자
         Random random = new Random();
@@ -76,24 +67,6 @@ public class Feb08ServiceImpl implements Feb08Service{
 
             }
 
-        }
-    }
-
-
-
-
-    @Override
-    public void booking(Scanner scanner) {
-
-    }
-
-    @Override
-    public void bank(Scanner scanner) {
-
-    }
-
-    @Override
-    public void gugudan(Scanner scanner) {
-
+}
     }
 }

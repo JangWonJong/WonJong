@@ -14,5 +14,9 @@ import java.util.Scanner;
  * 2022-02-08     Jangwonjong       최초 생성
  */
 public interface Feb08Service {
-    void aaa(Scanner scanner);
+    void lotto(Scanner scanner); // 로또
+    void baseball(Scanner scanner); // 야구
+    void booking(Scanner scanner); // 좌석예약
+    void bank(Scanner scanner); // 은행 입출금
+    void gugudan(Scanner scanner); // 구구단
 }

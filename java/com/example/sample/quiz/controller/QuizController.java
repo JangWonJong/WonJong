@@ -42,28 +42,22 @@ public class QuizController {
                             break;
                     }
                 case "2":
-<<<<<<< HEAD
-                    feb07Controller.execute(scanner);
-                    break;
-                case "3":
-                    feb08Controller.execute(scanner);
-                    ;break;
-=======
                     System.out.println("[소메뉴]\n 0.Exit \n1.주사위 \n2.가위바위보 \n3.소수 구하기\n 4.윤년/평년\n 5.임의숫자 맞추기");
                     switch (scanner.next()){
                         case "0":
                             System.out.println("### 종료 ###");return;
                         case "1":
                             System.out.println("### 1.주사위 ###");
-                            feb07Service.dice(scanner);break;
+                            feb07Service.dice(scanner);
+                            break;
                         case "2":
                             System.out.println("### 2.가위바위보 ###");
-                            feb07Service.rps(scanner);break;
+                            feb07Service.rps(scanner);
+                            break;
                     }
->>>>>>> a5fabee40f97644ecef1a494f3313e97599a75d1
-                default:
-                    System.out.println("Invalid ");
+                    break;
             }
+
         }
     }
 

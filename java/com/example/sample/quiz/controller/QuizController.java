@@ -33,6 +33,7 @@ public class QuizController {
                     feb07Controller.execute(scanner);
                     break;
                 case "3":
+                    feb08Controller.execute(scanner);
                     ;break;
                 default:
                     System.out.println("Invalid ");

@@ -24,49 +24,61 @@ public class Baseb {
      * 5. 세자리의 숫자를 맞추게 되면 게임 끝
      */
     public static void main(String[] args) {
-        int com[] = new int[3]; // 컴퓨터가 제공하는 숫자
-        int user[] = new int[3]; // 사용자가 입력할 숫자
-        Random random = new Random();
-        Scanner sc = new Scanner(System.in);
-        int count = 0; // 게임 횟수
-        // 랜덤 숫자 생성
-        while(com[0]==0) {
-            com[0] = random.nextInt(10);
+        Scanner scanner = new Scanner(System.in);
+        int com1 = (int) (Math.random() * 9) + 1;
+        int com2 = (int) (Math.random() * 9) + 1;
+        while (com1 == com2) {
+            com2 = (int) (Math.random() * 9) + 1;
         }
-        while(com[0]==com[1] || com[1]==0) {
-            com[1] = random.nextInt(10);
+        int com3 = (int) (Math.random() * 9) + 1;
+        while (com1 == com3 || com2 == com3) {
+            com3 = (int) (Math.random() * 9) + 1;
         }
-        while(com[1]==com[2] || com[2]==0) {
-            com[2] = random.nextInt(10);
-        }
-        while(true) {
-            int strike = 0;
-            int ball = 0;
-            for(int i=0; i<user.length; i++) {
-                System.out.print((i+1)+"번째 수: ");
-                user[i] = sc.nextInt();
-                if(user[i] > 9 || user[i] <= 0) {
-                    System.out.println("숫자 범위는 1~9 입니다.");
-                }
-            }
-            for(int i=0; i<com.length; i++) {
-                for(int j=0; j<user.length; j++) {
-                    if(com[i] == user[j] && i==j) { // 숫자와 위치가 일치
-                        strike++;
-                    } else if(com[i] ==user[j] && i!=j) { // 위치는 다르나 숫자는 일치
-                        ball++;
-                    }
-                }
-            }
-            System.out.println(strike+" 스트라이크 "+ball+" 볼 ");
-            count++;
-            if(strike == 3) {
-                System.out.println("게임 끝\n" + count + "번째 시도 성공");
-                break;
+//System.out.println(com1 + " " + com2 + " " + com3);
 
 
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
+
+        int strike = 0;
+        int ball = 0;
+        int out = 0;
+
+        while (strike != 3) {
+            System.out.println("user> 숫자 세 개를 입력하세요.");
+
+            strike = 0;      //돌려줄 때마다 매번 초기화 필요
+            ball = 0;
+            out = 0;
+
+            num1 = scanner.nextInt();
+            num2 = scanner.nextInt();
+            num3 = scanner.nextInt();
+            if (com1 == num1) {
+                strike += 1;
+            } else if (com1 == num2 || com1 == num3) {
+                ball += 1;
+            } else {
+                out += 1;
+            }
+            if (com2 == num2) {
+                strike += 1;
+            } else if (com2 == num1 || com2 == num3) {
+                ball += 1;
+            } else {
+                out += 1;
+            }
+            if (com3 == num3) {
+                strike += 1;
+            } else if (com3 == num1 || com3 == num2) {
+                ball += 1;
+            } else {
+                out += 1;
             }
 
-}
+            System.out.println("Strike : " + strike + ", Ball : " + ball + ", Out : " + out);
+
+        }
     }
 }

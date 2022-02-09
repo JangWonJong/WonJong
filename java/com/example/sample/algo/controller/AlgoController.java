@@ -1,6 +1,5 @@
 package com.example.sample.algo.controller;
 
-import com.example.sample.algo.algorithm.*;
 import com.example.sample.algo.service.*;
 
 import java.util.Scanner;

@@ -35,7 +35,6 @@ public class SampleApplication {
 					quizController.execute(scanner);
 					System.out.println("### Quiz ###");break;
 				case "4":
-
 					System.out.println("### Algorithm ###");break;
 				default:
 					System.out.println("Invalid Menu");break;

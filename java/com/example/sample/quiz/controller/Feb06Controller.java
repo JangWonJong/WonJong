@@ -1,7 +1,7 @@
 package com.example.sample.quiz.controller;
 
-import com.example.sample.quiz.service.QuizService;
-import com.example.sample.quiz.service.QuizServiceImpl;
+import com.example.sample.quiz.service.Feb06Service;
+import com.example.sample.quiz.service.Feb06ServiceImpl;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class Feb06Controller {
                 "BFS",          "Stack",        "Hash",        "Bin",     "DP",
                 "DFS",          "Queue",        "Sort",        "Greedy",  "Graph",
                 "Brute Force",  "Heap"};
-        QuizService service = new QuizServiceImpl();
+        Feb06Service service = new Feb06ServiceImpl();
         String res = "";
         while (true){
             System.out.println("[Menu] 0 .Exit 1.팀별 과제를 출력" +

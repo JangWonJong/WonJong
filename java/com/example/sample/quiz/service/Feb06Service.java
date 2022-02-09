@@ -11,7 +11,7 @@ package com.example.sample.quiz.service;
  * ======================================
  * 2022-02-07     Jangwonjong       최초 생성
  */
-public interface QuizService {
+public interface Feb06Service {
     void quiz1(String[] arr);
     void quiz2(String[] arr);
     void quiz3(String[] arr);

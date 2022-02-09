@@ -1,7 +1,5 @@
 package com.example.sample.quiz.service;
 
-import com.example.sample.quiz.service.QuizService;
-
 /**
  * packageName: com.example.sample.service
  * fileName   : QuizService
@@ -13,7 +11,7 @@ import com.example.sample.quiz.service.QuizService;
  * ======================================
  * 2022-02-07     Jangwonjong       최초 생성
  */
-public class QuizServiceImpl implements QuizService {
+public class Feb06ServiceImpl implements Feb06Service {
 
 
     @Override

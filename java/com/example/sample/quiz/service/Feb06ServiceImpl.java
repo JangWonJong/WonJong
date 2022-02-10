@@ -22,6 +22,10 @@ public class Feb06ServiceImpl implements Feb06Service {
             if (i%5==0) { s += "\n";
                 s += i + " : " + arr[i] + "\t";
             }
+            s += i + ":" + arr[i] +"\t";
+            if(i==21){
+                break;
+            }
         }
         System.out.println(s);
     }

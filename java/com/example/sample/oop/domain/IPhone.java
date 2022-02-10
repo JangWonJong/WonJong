@@ -1,5 +1,7 @@
 package com.example.sample.oop.domain;
 
+import com.example.sample.member.domain.CalcDTO;
+
 /**
  * packageName: com.example.sample.oop.domain
  * fileName   : IPhone
@@ -18,8 +20,8 @@ public class IPhone extends CelPhone {
     public final static String KIND = "아이폰";
     protected String search;
 
-    public IPhone(String company){
-        super(KIND,company,"이동");
+    public IPhone(String company, String move){
+        super(KIND,company,move);
     }
     public String getSearch() {
         return search;

@@ -18,6 +18,6 @@ public interface MemberService {
     String calc(CalcDTO calc);
     String google(GoogleDTO google);
     String grade(GradeDTO grade);
-    String login(LoginDTO login);
+    String login(UserDTO login);
     String kakao(KakaoDTO kakao);
 }

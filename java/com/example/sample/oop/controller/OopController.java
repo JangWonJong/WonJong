@@ -37,9 +37,9 @@ public class OopController {
                 case "2" :
                     System.out.println("extends 가 상속이다");
                     Phone phone = new Phone("금성전화기","금성전자");
-                    CelPhone celPhone = new CelPhone("핸드폰","블랙베리","이동중에");
-                    IPhone iPhone = new IPhone("애플");
-                    GalPhone galPhone = new GalPhone("삼성","갤럭시노트");
+                    CelPhone celPhone = new CelPhone("핸드폰","블랙베리","이동");
+                    IPhone iPhone = new IPhone("애플","이동");
+                    GalPhone galPhone = new GalPhone("삼성","갤럭시노트","");
                     PhoneService phoneService = new PhoneServiceImpl();
                     System.out.println("[소메뉴]0.Exit 1.집전화 2.휴대폰 3.아이폰 4.갤럭시폰");
                     switch (scanner.next()){

@@ -19,12 +19,6 @@ import java.util.Scanner;
  */
 public class AuthController {
     public void execute(Scanner scanner) {
-        BmiDTO bmi = new BmiDTO();
-        CalcDTO calc = new CalcDTO();
-        GoogleDTO google = new GoogleDTO();
-        GradeDTO grade = new GradeDTO();
-        LoginDTO login = new LoginDTO();
-        KakaoDTO kakao = new KakaoDTO();
         MemberService service = new MemberServiceImpl();
 
         while(true){
@@ -38,43 +32,49 @@ public class AuthController {
                     System.out.println("Exit"); return;
                 case "1":
                     System.out.println(BmiDTO.BMI_TITLE+"\n이름, 키, 몸무게 입력");
-                    bmi.setName(scanner.next());
-                    bmi.setTall(scanner.nextInt());
-                    bmi.setWeight(scanner.nextInt());
-                    res = service.bmi(bmi);
+                    BmiDTO b = BmiDTO.getInstance();
+                    b.setName(scanner.next());
+                    b.setTall(scanner.nextInt());
+                    b.setWeight(scanner.nextInt());
+                    res = service.bmi(b);
                     break;
                 case "2":
                     System.out.println(CalcDTO.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
-                    calc.setNum1(scanner.nextInt());
-                    calc.setOpcode(scanner.next());
-                    calc.setNum2(scanner.nextInt());
-                    res = service.calc(calc);
+                    CalcDTO c = CalcDTO.getInstance();
+                    c.setNum1(scanner.nextInt());
+                    c.setOpcode(scanner.next());
+                    c.setNum2(scanner.nextInt());
+                    res = service.calc(c);
                     break;
                 case "3":
                     System.out.println(GoogleDTO.GOOGLE_APP+"\nGoogle 검색 또는 URL 검색");
-                    google.setSearch(scanner.next());
-                    res = service.google(google);
+                    GoogleDTO gg = GoogleDTO.getInstance();
+                    gg.setSearch(scanner.next());
+                    res = service.google(gg);
                     break;
                 case "4":
                     System.out.println(GradeDTO.GRADE_TITLE+"\n 이름, 국어, 영어, 수학 입력");
-                    grade.setName(scanner.next());
-                    grade.setKor(scanner.nextInt());
-                    grade.setEng(scanner.nextInt());
-                    grade.setMath(scanner.nextInt());
-                    res = service.grade(grade);
+                    GradeDTO g = GradeDTO.getInstance();
+                    g.setName(scanner.next());
+                    g.setKor(scanner.nextInt());
+                    g.setEng(scanner.nextInt());
+                    g.setMath(scanner.nextInt());
+                    res = service.grade(g);
                     break;
                 case "5":
-                    System.out.println(LoginDTO.LOGIN_TITLE+"\n이름 아이디 비밀번호를 입력하세요");
-                    login.setName(scanner.next());
-                    login.setId(scanner.next());
-                    login.setPw(scanner.next());
-                    res = service.login(login);
+                    System.out.println(UserDTO.LOGIN_TITLE+"\n이름 아이디 비밀번호를 입력하세요");
+                    UserDTO u =UserDTO.getInstance();
+                    u.setName(scanner.next());
+                    u.setId(scanner.next());
+                    u.setPw(scanner.next());
+                    res = service.login(u);
                     break;
                 case "6":
                     System.out.println(KakaoDTO.KAOKAO_TITLE+"\n 전화번호 메시지");
-                    kakao.setTelno(scanner.next());
-                    kakao.setMessage(scanner.next());
-                    res = service.kakao(kakao);
+                    KakaoDTO k = KakaoDTO.getInstance();
+                    k.setTelno(scanner.next());
+                    k.setMessage(scanner.next());
+                    res = service.kakao(k);
                     break;
                 default : res = "Invalid MENU"  ; break;
             }

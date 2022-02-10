@@ -16,6 +16,12 @@ package com.example.sample.member.domain;
  */
 public class BmiDTO extends Object {
     public static String BMI_TITLE = "BMI 구하기";
+
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    private BmiDTO(){}
+    public static BmiDTO getInstance(){return bmiDTO;}
+
+
     private String name;
     private double tall;
     private double weight;

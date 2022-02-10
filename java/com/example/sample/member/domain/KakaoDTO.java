@@ -13,6 +13,12 @@ package com.example.sample.member.domain;
 
 public class KakaoDTO {
     public static String KAOKAO_TITLE = "KAKAO";
+
+    private final static KakaoDTO kakaoDTO = new KakaoDTO();
+    private KakaoDTO(){}
+    public static KakaoDTO getInstance(){return kakaoDTO;}
+
+
     private String telno;
     private String message;
 

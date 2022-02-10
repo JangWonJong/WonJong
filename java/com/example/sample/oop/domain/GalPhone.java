@@ -18,8 +18,8 @@ public class GalPhone extends IPhone{
     public final static String KIND = "갤럭시";
     private String pay;
 
-    public GalPhone(String company, String search){
-        super(company);
+    public GalPhone(String company, String search, String move){
+        super(company,move);
         this.search = search;
     }
 

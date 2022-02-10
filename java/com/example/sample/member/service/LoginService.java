@@ -1,6 +1,6 @@
 package com.example.sample.member.service;
 
-import com.example.sample.member.domain.LoginDTO;
+import com.example.sample.member.domain.UserDTO;
 
 /**
  * packageName: com.example.sample.calc
@@ -15,8 +15,8 @@ import com.example.sample.member.domain.LoginDTO;
  */
 
 public class LoginService {
-    public String login(LoginDTO login) {
-    return String.format((login.getPw().equals(LoginDTO.PASSWORD)) ?
+    public String login(UserDTO login) {
+    return String.format((login.getPw().equals(UserDTO.PASSWORD)) ?
             String.format(" %s 님의 비번 %s 가 맞습니다. 로그인 성공 ", login.getName(),login.getPw())
             : String.format(" %s 의 ID 는 맞고, 비번 %s 가 틀립니다. 로그인 실패 ", login.getName(),login.getPw()));
 

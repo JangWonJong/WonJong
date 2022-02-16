@@ -16,7 +16,7 @@ public class SampleApplication {
 		Scanner scanner = new Scanner(System.in);
 		AuthController memberController = new AuthController();
 		OopController phoneController = new OopController();
-		QuizController quizController = new QuizController();
+		QuizController quizController = new QuizController();      
 
 
 		while (true){

@@ -21,15 +21,31 @@ public class Star {
         int rand = random.nextInt(10);
 
         System.out.println("직각 삼각형 별찍기");
-        for (int i =1; i<rand; i++){
-            for(int j =1; j<=i; j++){
+        for (int i = 1; i < rand; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
-                }
-                System.out.println();
             }
+            System.out.println();
+        }
 
         System.out.println("정삼각형 별찍기");
+        for (int i = 1; i <= rand; i++) {
+            // 공백 j for문
+            for (int j = rand; j > i; j--) {
+                System.out.print(" ");
+            }
+            // 별 j for문
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            // 공백 j for문
+            for (int j = rand; j > i; j--) {
+                System.out.print(" ");
+            }
+
+            System.out.println("");
 
         }
         //배열 만들기
     }
+}

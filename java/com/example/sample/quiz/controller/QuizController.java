@@ -155,8 +155,6 @@ public class QuizController {
                             break;
                         default:
                             System.out.println("Invalid menu");
-
-
                     }
 
                     break;

@@ -20,9 +20,10 @@ public class QuizController {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
 
         while (true){
-            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 ");
+            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()){
                 case "0":
                     System.out.println("### Exit ###");return;
@@ -111,6 +112,53 @@ public class QuizController {
                         default:
                             System.out.println("Invalid Menu");
                     }
+                case "4":
+                    System.out.println("[소메뉴]\n0.Exit\n1.버블\n2.인서트\n3.셀렉트\n4.퀵\n5.머지\n6.매직스퀘어" +
+                            "\n7.지그재그\n8.직각삼각형\n9.정삼각형");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("Exit");return;
+                        case "1":
+                            System.out.println("버블");
+                            feb10Service.bubbleSort(scanner);
+                        case "2":
+                            System.out.println("인서트");
+                            feb10Service.insertionSort(scanner);
+                            break;
+                        case "3":
+                            System.out.println("셀렉트");
+                            feb10Service.selectionSort(scanner);
+                            break;
+                        case "4":
+                            System.out.println("퀵");
+                            feb10Service.quickSort(scanner);
+                            break;
+                        case "5":
+                            System.out.println("머지");
+                            feb10Service.mergeSort(scanner);
+                            break;
+                        case "6":
+                            System.out.println("매직스퀘어");
+                            feb10Service.magicSquare(scanner);
+                            break;
+                        case "7":
+                            System.out.println("지그재그");
+                            feb10Service.zigzag(scanner);
+                            break;
+                        case "8":
+                            System.out.println("직각삼각형");
+                            feb10Service.rectangleStarPrint(scanner);
+                            break;
+                        case "9":
+                            System.out.println("정삼각형");
+                            feb10Service.triangleStarPrint(scanner);
+                            break;
+                        default:
+                            System.out.println("Invalid menu");
+
+
+                    }
+
                     break;
             }
 

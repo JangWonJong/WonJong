@@ -1,4 +1,4 @@
-package com.example.sample.test.naver;
+package com.example.sample.test.user;
 
 import java.util.Scanner;
 import java.lang.Math;

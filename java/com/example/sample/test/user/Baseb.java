@@ -1,4 +1,4 @@
-package com.example.sample.test;
+package com.example.sample.test.user;
 
 import java.util.Scanner;
 import java.util.Random;
